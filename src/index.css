@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background-color: #7c6aff;
+    color: #fff;
+  }
+
+  body {
+    background-color: #0f0f1a;
+    font-family: sans-serif;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .primary-btn {
+    color: #fff;
+    background-image: linear-gradient(to right, #7c6aff, #06b6d4);
+    box-shadow: 0px 0px 13px 0px #7c6aff;
+    transition: 0.3s;
+    padding: 13px 32px;
+    border-radius: 50px;
+  }
+
+  .primary-btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .secondary-btn {
+    color: #7c6aff;
+    border: 2px solid;
+    transition: 0.3s;
+    padding: 13px 32px;
+    border-radius: 50px;
+  }
+
+  .secondary-btn:hover {
+    background-color: #7c6aff;
+    transform: translateY(-3px);
+    color: #fff;
+    border-color: #7c6aff;
+  }
+
+  .scroll-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(135deg, #7c6aff, #06b6d4);
+    box-shadow: 0 10px 30px rgba(124, 106, 255, 0.2);
+    z-index: 999;
+    transition: 0.3s;
+  }
+
+  .scroll-top:hover {
+    transform: translateY(-6px);
+  }
+
+  .scroll-top i {
+    font-size: 20px;
+  }
+
+  .section-heading {
+    margin-bottom: 70px;
+    text-align: center;
+    max-width: 700px;
+    margin-inline: auto;
+  }
+
+  .section-subtitle {
+    display: inline-block;
+    font-family: "Courier New", Courier, monospace;
+    color: #7c6aff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(124, 106, 255, 0.12);
+    border: 1px solid rgba(124, 106, 255, 0.25);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-subtitle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(124, 106, 255, 0.25),
+      transparent
+    );
+    transform: translateX(-100%);
+    animation: shimmer 2s infinite alternate;
+  }
+
+  .section-heading h2 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .section-heading h2 span {
+    color: #7c6aff;
+  }
+
+  .heading-line {
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(90deg, #7c6aff, #06b6d4);
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .heading-line::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    animation: moveDot 2s infinite ease-in-out;
+  }
+
+  .container {
+    width: 90%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .primary-btn,
+  .secondary-btn {
+    padding: 13px 16px;
+  }
+  .section-heading h2 {
+    font-size: 35px;
+  }
+  .scroll-top {
+    width: 52px;
+    height: 52px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+/* ================= Scrollbar ================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #11111d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c6aff 0%, #5b4bdb 45%, #06b6d4 100%);
+  border-radius: 999px;
+  border: 2px solid #11111d;
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #927dff 0%, #7c6aff 45%, #22d3ee 100%);
+}
+
+::-webkit-scrollbar-corner {
+  background: #11111d;
+}
+
+/* Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7c6aff #11111d;
+}
