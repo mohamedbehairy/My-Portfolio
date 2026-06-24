@@ -1,5 +1,5 @@
 import WatchioImg from "../../assets/WatchioImg.png";
-import SnapCartImg from "../../assets/SnapCartImg.png";
+import SnapcartImg from "../../assets/SnapcartImg.png";
 import PostifyImg from "../../assets/PostifyImg.png";
 import RecipeAppImg from "../../assets/RecipeAppImg.png";
 import GameAppImg from "../../assets/GameAppImg.png";
@@ -13,7 +13,7 @@ export const projectsData = [
     description:
       "An e-commerce platform built with Next.js App Router, TypeScript, and modern best practices.",
     icon: <i className="fa-solid fa-cart-shopping"></i>,
-    image: SnapCartImg,
+    image: SnapcartImg,
     skills: ["Next.js", "TypeScript", "shadcn/ui", "Tailwind"],
     liveDemo: "https://snapcart-omega.vercel.app/",
     repoLink: "https://github.com/mohamedbehairy/snapcart-app",
