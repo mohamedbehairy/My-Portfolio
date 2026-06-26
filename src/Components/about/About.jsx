@@ -4,7 +4,10 @@ import { infoItemData } from "./infoItemData";
 export default function About() {
   return (
     <>
-      <section className="py-[100px] max-[991px]:py-[60px] max-[575px]:py-[40px] px-0" id="about">
+      <section
+        className="py-[100px] max-[991px]:py-[60px] max-[575px]:py-[40px] px-0"
+        id="about"
+      >
         <div className="section-heading">
           <p className="section-subtitle">WHO I AM</p>
           <h2>
@@ -13,22 +16,22 @@ export default function About() {
           <div className="heading-line"></div>
         </div>
         <div className="container flex gap-[50px] max-[991px]:flex-col">
-          <div className="about-content flex-1">
-            <div className="about-desc mb-5">
+          <div className="flex-1 about-content">
+            <div className="mb-5 about-desc">
               <p className="text-paragraph leading-[1.7] text-[20px]">
                 I'm{" "}
-                <strong className="text-light font-bold">
+                <strong className="font-bold text-light">
                   Mohamed Behairy
                 </strong>
                 , a passionate{" "}
-                <strong className="text-light font-bold">
+                <strong className="font-bold text-light">
                   Front-End Web Developer{" "}
                 </strong>
                 with a strong focus on building modern, responsive, and
                 high-performance web applications. I specialize in{" "}
-                <strong className="text-light font-bold">React</strong>,
-                <strong className="text-light font-bold"> Next.js</strong>, and
-                <strong className="text-light font-bold"> TypeScript</strong>,
+                <strong className="font-bold text-light">React</strong>,
+                <strong className="font-bold text-light"> Next.js</strong>, and
+                <strong className="font-bold text-light"> TypeScript</strong>,
                 creating clean, scalable, and user-friendly interfaces. I enjoy
                 transforming ideas into real products, continuously learning new
                 technologies, and writing maintainable code that delivers
@@ -55,10 +58,10 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="about-actions flex items-center gap-5">
+            <div className="flex items-center gap-5 about-actions">
               <a
                 target="_blank"
-                href="/src/assets/mohamed behairy.pdf"
+                href="/mohamed behairy.pdf"
                 className="btn primary-btn"
               >
                 Download CV
