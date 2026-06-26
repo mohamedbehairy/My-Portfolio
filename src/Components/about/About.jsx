@@ -1,7 +1,11 @@
+import { useState } from "react";
 import InfoItem from "./InfoItem";
 import { infoItemData } from "./infoItemData";
+import CVModal from "./CVModal";
 
 export default function About() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       <section
@@ -59,13 +63,12 @@ export default function About() {
               </div>
             </div>
             <div className="flex items-center gap-5 about-actions">
-              <a
-                target="_blank"
-                href="/mohamed behairy.pdf"
+              <button
+                onClick={() => setIsModalOpen(true)}
                 className="btn primary-btn"
               >
-                Download CV
-              </a>
+                View CV
+              </button>
               <a href="#contact" className="btn secondary-btn">
                 Contact Me
               </a>
@@ -87,6 +90,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <CVModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 }
